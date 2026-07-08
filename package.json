@@ -18,8 +18,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "client": "cross-env PORT=3001 react-scripts start",
-    "server": "node server/index.js",
-    "start": "concurrently -k \"npm run server\" \"npm run client\"",
+    "start": "npm run client",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

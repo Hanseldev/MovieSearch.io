@@ -25,13 +25,24 @@ const STYLES = `
     color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; }
   .app { min-height: 100vh; display: flex; flex-direction: column; }
 
-  .header { padding: 28px 32px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,209,102,0.16); background: linear-gradient(180deg, rgba(32, 16, 16, 0.7), rgba(8,8,8,0.38)); box-shadow: 0 18px 42px rgba(0,0,0,0.34); position: relative; backdrop-filter: blur(18px) saturate(145%); -webkit-backdrop-filter: blur(18px) saturate(145%); }
+  .header {
+    padding: 24px 32px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,209,102,0.16);
+    background: linear-gradient(180deg, rgba(32, 16, 16, 0.7), rgba(8,8,8,0.38));
+    box-shadow: 0 18px 42px rgba(0,0,0,0.34);
+    position: relative;
+    backdrop-filter: blur(18px) saturate(145%);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+  }
   .header::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,209,102,0.65), rgba(214,40,40,0.8), rgba(255,209,102,0.65), transparent); }
-  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 2px; color: var(--text); display: flex; align-items: center; gap: 6px; }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 2.5px; color: var(--text); display: flex; align-items: center; gap: 6px; }
   .logo span { color: var(--accent); }
   .logo-dot { width: 8px; height: 8px; background: var(--accent2); border-radius: 50%; display: inline-block; margin-bottom: 2px; box-shadow: 0 0 10px rgba(255,209,102,0.5); }
   .contact-wrap { position: relative; display: flex; justify-content: flex-end; }
-  .contact-button { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; border: 1px solid rgba(255,209,102,0.2); color: #fff7e1; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.3px; background: rgba(255,255,255,0.05); box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 12px 26px rgba(0,0,0,0.2); backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%); transition: transform 0.2s, border-color 0.2s, background 0.2s, color 0.2s; cursor: pointer; }
+  .contact-button { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; border: 1px solid rgba(255,209,102,0.18); color: #fff7e1; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.3px; background: rgba(255,255,255,0.04); box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 12px 26px rgba(0,0,0,0.2); backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%); transition: transform 0.2s, border-color 0.2s, background 0.2s, color 0.2s; cursor: pointer; }
   .contact-button:hover { transform: translateY(-1px); border-color: rgba(255,209,102,0.42); background: rgba(255,209,102,0.1); }
   .contact-button strong { font-weight: 600; }
   .contact-button .chev { font-size: 0.72rem; color: var(--accent2); }
@@ -42,15 +53,14 @@ const STYLES = `
   .contact-link.whatsapp { color: #dfffe7; }
   .contact-link.email { color: #fff3d6; margin-top: 8px; }
 
-  .hero { padding: 60px 32px 40px; text-align: center; max-width: 800px; margin: 0 auto; width: 100%; position: relative; }
+  .hero { padding: 56px 32px 34px; text-align: center; max-width: 820px; margin: 0 auto; width: 100%; position: relative; }
   .hero::before { content: 'NOW SHOWING'; display: inline-block; font-family: 'Bebas Neue', sans-serif; letter-spacing: 4px; color: var(--accent2); font-size: 0.9rem; margin-bottom: 14px; text-shadow: 0 0 12px rgba(255,209,102,0.18); }
-  .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 12px; color: var(--text); }
+  .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 12px; color: var(--text); text-align: center; }
   .hero-title .caps { font-style: normal; text-transform: uppercase; color: var(--accent2); text-shadow: 0 0 18px rgba(255,209,102,0.16); }
-  .hero-sub { color: var(--muted); font-size: 1rem; margin-bottom: 40px; font-weight: 300; }
-
+  .hero-sub { color: var(--muted); font-size: 1rem; margin-bottom: 34px; font-weight: 300; line-height: 1.7; }
   .search-wrap { position: relative; max-width: 620px; margin: 0 auto; }
-  .search-input { width: 100%; background: rgba(19, 13, 13, 0.66); border: 1.5px solid rgba(255,209,102,0.16); border-radius: 16px; padding: 18px 60px 18px 22px; font-size: 1rem; color: var(--text); font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s, box-shadow 0.2s, background 0.2s; backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 16px 32px rgba(0,0,0,0.22); }
-  .search-input:focus { border-color: var(--accent2); background: rgba(24, 15, 15, 0.8); box-shadow: 0 0 0 3px rgba(255,209,102,0.12), 0 16px 32px rgba(0,0,0,0.26); }
+  .search-input { width: 100%; background: rgba(19, 13, 13, 0.76); border: 1.5px solid rgba(255,209,102,0.16); border-radius: 16px; padding: 18px 60px 18px 22px; font-size: 1rem; color: var(--text); font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s, box-shadow 0.2s, background 0.2s; backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 16px 32px rgba(0,0,0,0.22); }
+  .search-input:focus { border-color: var(--accent2); background: rgba(24, 15, 15, 0.88); box-shadow: 0 0 0 3px rgba(255,209,102,0.12), 0 16px 32px rgba(0,0,0,0.26); }
   .search-input::placeholder { color: var(--dim); }
   .search-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: linear-gradient(180deg, rgba(230,57,70,0.95), rgba(183,31,42,0.95)); border: none; border-radius: 12px; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, box-shadow 0.2s, transform 0.2s; color: #fff1d6; font-size: 1.1rem; box-shadow: 0 12px 24px rgba(214,40,40,0.22); }
   .search-btn:hover { transform: translateY(-50%) scale(1.02); background: linear-gradient(180deg, rgba(255,209,102,0.96), rgba(244,185,66,0.96)); color: #1a1111; }
@@ -60,7 +70,7 @@ const STYLES = `
   .filter-btn { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,209,102,0.18); border-radius: 20px; padding: 6px 16px; font-size: 0.8rem; color: var(--muted); cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s; backdrop-filter: blur(12px) saturate(140%); -webkit-backdrop-filter: blur(12px) saturate(140%); }
   .filter-btn:hover, .filter-btn.active { background: rgba(214,40,40,0.35); border-color: rgba(255,209,102,0.38); color: #fff4d9; font-weight: 500; box-shadow: 0 8px 20px rgba(0,0,0,0.18); }
 
-  .surprise-btn { background: linear-gradient(90deg, rgba(255,209,102,0.98), rgba(214,40,40,0.96)); color: #1a1111; border: none; padding: 8px 14px; border-radius: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 10px 22px rgba(214,40,40,0.18); transition: transform 0.18s, box-shadow 0.18s; }
+  .surprise-btn { background: linear-gradient(90deg, rgba(255,209,102,0.98), rgba(214,40,40,0.96)); color: #1a1111; border: none; padding: 8px 14px; border-radius: 14px; font-weight: 700; cursor: pointer; box-shadow: 0 10px 22px rgba(214,40,40,0.18); transition: transform 0.18s, box-shadow 0.18s; }
   .surprise-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(214,40,40,0.22); }
 
   .region-row { display: flex; justify-content: center; margin-top: 14px; }
@@ -70,14 +80,13 @@ const STYLES = `
   .region-select option { background: #160b0b; color: var(--text); }
 
   .results-section { flex: 1; padding: 0 32px 60px; max-width: 1200px; margin: 0 auto; width: 100%; }
-  .results-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 20px; }
+  .results-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 18px; }
   .results-label strong { color: var(--accent); font-weight: 600; }
 
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; }
 
   .movie-card { background: linear-gradient(180deg, rgba(34,18,18,0.75), rgba(18,11,11,0.78)); border-radius: 14px; overflow: hidden; cursor: pointer; border: 1px solid rgba(255,209,102,0.14); transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; position: relative; backdrop-filter: blur(14px) saturate(145%); -webkit-backdrop-filter: blur(14px) saturate(145%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); }
   .movie-card:hover { transform: translateY(-4px); border-color: rgba(255,209,102,0.5); box-shadow: 0 18px 34px rgba(0,0,0,0.22); }
-
   .movie-poster { width: 100%; aspect-ratio: 2/3; object-fit: cover; display: block; background: #261616; }
   .poster-placeholder { width: 100%; aspect-ratio: 2/3; background: linear-gradient(135deg, #2a1515, #120b0b); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--accent2); font-size: 2rem; gap: 8px; }
   .poster-placeholder span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); font-family: 'Inter', sans-serif; }
@@ -86,7 +95,7 @@ const STYLES = `
   .movie-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
   .movie-year { font-size: 0.75rem; color: var(--muted); }
   .movie-rating { display: flex; align-items: center; gap: 3px; font-size: 0.75rem; color: var(--accent2); font-weight: 600; }
-  .badge { position: absolute; top: 8px; left: 8px; background: var(--accent); color: #fff1d6; font-size: 0.6rem; padding: 2px 7px; border-radius: 4px; font-weight: 600; text-transform: uppercase; box-shadow: 0 6px 16px rgba(214,40,40,0.18); }
+  .badge { position: absolute; top: 8px; left: 8px; background: var(--accent); color: #fff1d6; font-size: 0.6rem; padding: 2px 7px; border-radius: 4px; font-weight: 600; text-transform: uppercase; box-shadow: 0 6px 16px rgba(214,40,40,0.18); z-index: 2; }
 
   .detail-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.72); z-index: 100; display: flex; align-items: flex-end; justify-content: center; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 20px; }
   .detail-panel { background: linear-gradient(180deg, rgba(21,16,16,0.76), rgba(13,9,9,0.9)); border-radius: 20px 20px 0 0; width: 100%; max-width: 720px; max-height: 90vh; overflow-y: auto; border: 1px solid rgba(255,209,102,0.12); border-bottom: none; scrollbar-width: none; backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%); }
@@ -108,6 +117,16 @@ const STYLES = `
   .detail-plot { color: var(--text); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px; font-weight: 300; }
 
   .detail-availability-note { color: var(--muted); font-size: 0.84rem; line-height: 1.6; margin-bottom: 12px; }
+  .detail-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  .trailer-btn { background: linear-gradient(90deg, rgba(214,40,40,0.96), rgba(255,209,102,0.92)); color: #1a1111; border: none; padding: 10px 14px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s; box-shadow: 0 10px 22px rgba(214,40,40,0.2); }
+  .trailer-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(214,40,40,0.24); }
+  .trailer-btn.secondary { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid rgba(255,209,102,0.14); box-shadow: none; }
+  .trailer-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .trailer-panel { margin-bottom: 22px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,209,102,0.14); background: rgba(0,0,0,0.24); box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); }
+  .trailer-panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid rgba(255,209,102,0.12); }
+  .trailer-panel-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.8px; color: var(--accent2); }
+  .trailer-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; background: #000; }
+  .trailer-state { padding: 16px 14px; color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
   .provider-list { display: grid; gap: 14px; margin-bottom: 24px; }
   .provider-group { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,209,102,0.12); border-radius: 16px; padding: 14px; backdrop-filter: blur(14px) saturate(145%); -webkit-backdrop-filter: blur(14px) saturate(145%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); }
   .provider-group-title-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
@@ -136,7 +155,7 @@ const STYLES = `
   .trending-pill:hover { border-color: var(--accent2); color: var(--accent2); background: rgba(255,209,102,0.08); }
 
   @keyframes spin { to { transform: rotate(360deg); } }
-  @media (max-width: 600px) { .hero { padding: 40px 20px 28px; } .results-section { padding: 0 16px 40px; } .header { padding: 20px 20px 16px; } .detail-body { padding: 18px 18px 32px; } .grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; } }
+  @media (max-width: 600px) { .hero { padding: 40px 20px 28px; } .results-section { padding: 0 16px 40px; } .header { padding: 20px 20px 16px; } .detail-body { padding: 18px 18px 32px; } .grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; } .detail-panel { max-width: 100%; border-radius: 20px 20px 0 0; } .detail-backdrop, .backdrop-placeholder { height: 220px; } }
 `;
 
 const TRENDING = ["Inception", "Interstellar", "The Dark Knight", "Breaking Bad", "Game of Thrones", "Parasite", "Oppenheimer", "The Bear"];
@@ -272,6 +291,10 @@ export default function MovieSearch() {
   const [selected, setSelected] = useState(null);
   const [providers, setProviders] = useState(null);
   const [providersLoading, setProvidersLoading] = useState(false);
+  const [trailer, setTrailer] = useState(null);
+  const [trailerLoading, setTrailerLoading] = useState(false);
+  const [trailerError, setTrailerError] = useState("");
+  const [trailerOpen, setTrailerOpen] = useState(false);
   const [searched, setSearched] = useState(false);
   const [loading, setLoading] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
@@ -282,11 +305,19 @@ export default function MovieSearch() {
     if (!selected) {
       setProviders(null);
       setProvidersLoading(false);
+      setTrailer(null);
+      setTrailerLoading(false);
+      setTrailerError("");
+      setTrailerOpen(false);
       return undefined;
     }
 
     setProviders(null);
     setProvidersLoading(true);
+    setTrailer(null);
+    setTrailerLoading(false);
+    setTrailerError("");
+    setTrailerOpen(false);
 
     fetchWatchProviders(selected.id, selected.media_type, country)
       .then((data) => {
@@ -301,6 +332,39 @@ export default function MovieSearch() {
       isActive = false;
     };
   }, [selected, country]);
+
+  const fetchTrailer = async () => {
+    if (!selected || trailerLoading) return;
+
+    setTrailerLoading(true);
+    setTrailerError("");
+
+    try {
+      const endpoint = selected.media_type === "tv" ? "tv" : "movie";
+      const res = await fetch(
+        `${TMDB_BASE}/${endpoint}/${selected.id}/videos?api_key=${TMDB_API_KEY}&language=en-US`
+      );
+      const data = await res.json();
+      const videos = Array.isArray(data.results) ? data.results : [];
+      const trailerVideo = videos.find(
+        (video) => video.site === "YouTube" && /trailer|teaser/i.test(video.type || "")
+      ) || videos.find((video) => video.site === "YouTube");
+
+      if (trailerVideo) {
+        setTrailer(trailerVideo);
+        setTrailerOpen(true);
+      } else {
+        setTrailerError("No trailer found for this title.");
+        setTrailerOpen(false);
+      }
+    } catch (error) {
+      console.error("trailer fetch failed", error);
+      setTrailerError("Unable to load trailer right now.");
+      setTrailerOpen(false);
+    } finally {
+      setTrailerLoading(false);
+    }
+  };
 
   const doSearch = async (q) => {
     if (!q.trim()) {
@@ -394,10 +458,8 @@ export default function MovieSearch() {
               </button>
             ))}
           </div>
-          <div style={{ marginTop: 12, display: 'flex', justifyContent: 'center', gap: 10 }}>
+          <div style={{ marginTop: 12, display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap' }}>
             <button className="surprise-btn" onClick={pickRandom}>🎲 Surprise me</button>
-          </div>
-          <div className="region-row">
             <div className="region-picker">
               <label htmlFor="country-select">Country</label>
               <select id="country-select" className="region-select" value={country} onChange={(e) => setCountry(e.target.value)}>
@@ -441,7 +503,7 @@ export default function MovieSearch() {
 
           {results.length > 0 && (
             <>
-              <p className="results-label"><strong>{results.length}</strong> results for "{query}"</p>
+              <p className="results-label"><strong>{results.length}</strong> results for "{query}".</p>
               <div className="grid">
                 {results.map((item, i) => {
                   const poster = posterUrl(item.poster_path);
@@ -485,6 +547,35 @@ export default function MovieSearch() {
                 </div>
                 <div className="section-label">Overview</div>
                 <p className="detail-plot">{selected.overview || "No overview available."}</p>
+                <div className="detail-actions">
+                  <button className="trailer-btn" onClick={fetchTrailer} disabled={trailerLoading}>
+                    {trailerLoading ? "Loading trailer…" : trailerOpen ? "Refresh trailer" : "Play trailer"}
+                  </button>
+                  {trailerOpen && (
+                    <button className="trailer-btn secondary" onClick={() => setTrailerOpen(false)}>
+                      Hide trailer
+                    </button>
+                  )}
+                </div>
+                {(trailerOpen || trailerError) && (
+                  <div className="trailer-panel">
+                    <div className="trailer-panel-header">
+                      <div className="trailer-panel-title">Trailer</div>
+                      {trailer && <a className="provider-group-link" href={`https://www.youtube.com/watch?v=${trailer.key}`} target="_blank" rel="noreferrer">Open on YouTube</a>}
+                    </div>
+                    {trailerOpen && trailer ? (
+                      <iframe
+                        className="trailer-frame"
+                        src={`https://www.youtube.com/embed/${trailer.key}?rel=0&modestbranding=1`}
+                        title={`${selected.title || selected.name} trailer`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <div className="trailer-state">{trailerError || "Pick a title with an available trailer."}</div>
+                    )}
+                  </div>
+                )}
                 <div className="section-label">Where to watch</div>
                 <p className="detail-availability-note">Availability is checked for {COUNTRIES.find((item) => item.code === country)?.name || country}. If no services appear, TMDB does not currently list providers for that title in this region.</p>
                 {providersLoading && <p className="detail-availability-note">Checking streaming services…</p>}
