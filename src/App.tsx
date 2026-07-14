@@ -1,5 +1,12 @@
+import { Button } from "./components/Button";
+
 function App() {
-    return (<div></div>)
+	return (
+		<main className="h-screen bg-bg-dark text-text-light font-sans">
+            
+			<Button>Hello</Button>
+		</main>
+	);
 }
 
 export default App;
