@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { Button } from "./Button";
-import type { MediaItem } from "./MovieCard";
+import type { MediaItem } from "../types";
 
 interface MovieDetailModalProps {
 	item: MediaItem | null;
@@ -14,12 +14,11 @@ export const MovieDetailModal: FC<MovieDetailModalProps> = ({
 	if (!item) return null;
 
 	const title = item.title || item.name || "Unknown Title";
-	const year = (item.release_date || item.first_air_date || "").slice(0, 4);
-	const rating = item.vote_average ? item.vote_average.toFixed(1) : "N/A";
+	const year = (item.releaseDate || item.firstAirDate || "").slice(0, 4);
+	const rating = item.voteAverage ? item.voteAverage.toFixed(1) : "N/A";
 
-	// Large poster/backdrop fallback
-	const posterUrl = item.poster_path
-		? `https://image.tmdb.org/t/p/w780${item.poster_path}`
+	const posterUrl = item.posterPath
+		? `https://image.tmdb.org/t/p/w780${item.posterPath}`
 		: "https://placehold.co/780x1170/1e1e1e/938f99?text=No+Poster";
 
 	return (
@@ -46,7 +45,7 @@ export const MovieDetailModal: FC<MovieDetailModalProps> = ({
 						alt={title}
 						className="w-full h-full object-cover"
 					/>
-					{item.media_type === "tv" && (
+					{item.mediaType === "tv" && (
 						<span className="absolute top-4 left-4 z-10 px-3 py-1 bg-accent-red text-bg-dark text-xs font-bebas tracking-wider rounded font-bold shadow-md">
 							TV SERIES
 						</span>
@@ -72,15 +71,12 @@ export const MovieDetailModal: FC<MovieDetailModalProps> = ({
 								<span className="text-dim-gold text-xs font-normal">/ 10</span>
 							</span>
 							<span className="w-1.5 h-1.5 rounded-full bg-dim-gold/40" />
-							<span className="capitalize">{item.media_type || "movie"}</span>
+							<span className="capitalize">{item.mediaType || "movie"}</span>
 						</div>
 
-						{/* Description Fallback */}
+						{/* Real Description Overview */}
 						<p className="text-sm text-muted-gold leading-relaxed font-sans">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-							elementum, eros sit amet pellentesque posuere, sapien purus
-							imperdiet lacus, et pretium leo elit eu arcu. (Real TMDB
-							descriptions will map here).
+							{item.overview || "No description available for this title."}
 						</p>
 					</div>
 

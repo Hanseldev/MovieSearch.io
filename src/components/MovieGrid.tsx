@@ -1,5 +1,6 @@
 import type { FC } from "react";
-import { MovieCard, type MediaItem } from "./MovieCard";
+import { MovieCard } from "./MovieCard";
+import type { MediaItem } from "../types";
 
 interface MovieGridProps {
 	items: readonly MediaItem[];

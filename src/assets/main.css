@@ -41,4 +41,5 @@
 
 body {
 	background-color: var(--color-bg-dark);
+	color: var(--color-text-light);
 }

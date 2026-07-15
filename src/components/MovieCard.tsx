@@ -1,15 +1,6 @@
 import type { FC } from "react";
-
-export interface MediaItem {
-	id: number;
-	title?: string;
-	name?: string;
-	poster_path: string | null;
-	media_type?: "movie" | "tv";
-	release_date?: string;
-	first_air_date?: string;
-	vote_average?: number;
-}
+// Import our clean global domain type
+import type { MediaItem } from "../types";
 
 interface MovieCardProps {
 	item: MediaItem;
@@ -18,12 +9,11 @@ interface MovieCardProps {
 
 export const MovieCard: FC<MovieCardProps> = ({ item, onClick }) => {
 	const title = item.title || item.name || "Unknown Title";
-	const year = (item.release_date || item.first_air_date || "").slice(0, 4);
-	const rating = item.vote_average ? item.vote_average.toFixed(1) : "N/A";
+	const year = (item.releaseDate || item.firstAirDate || "").slice(0, 4);
+	const rating = item.voteAverage ? item.voteAverage.toFixed(1) : "N/A";
 
-	// Clean fallback poster URL
-	const posterUrl = item.poster_path
-		? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+	const posterUrl = item.posterPath
+		? `https://image.tmdb.org/t/p/w500${item.posterPath}`
 		: "https://placehold.co/500x750/1e1e1e/938f99?text=No+Poster";
 
 	return (
@@ -33,7 +23,7 @@ export const MovieCard: FC<MovieCardProps> = ({ item, onClick }) => {
 		>
 			{/* Poster Image Frame */}
 			<div className="relative aspect-[2/3] w-full overflow-hidden bg-surface-dark">
-				{item.media_type === "tv" && (
+				{item.mediaType === "tv" && (
 					<span className="absolute top-3 left-3 z-10 px-2.5 py-0.5 bg-accent-red text-bg-dark text-xxs font-bebas tracking-wider rounded uppercase font-bold">
 						TV
 					</span>
