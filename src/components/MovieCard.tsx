@@ -23,11 +23,11 @@ export const MovieCard: FC<MovieCardProps> = ({ item, onClick }) => {
 		>
 			{/* Poster Image Frame */}
 			<div className="relative aspect-[2/3] w-full overflow-hidden bg-surface-dark">
-				{item.mediaType === "tv" && (
-					<span className="absolute top-3 left-3 z-10 px-2.5 py-0.5 bg-accent-red text-bg-dark text-xxs font-bebas tracking-wider rounded uppercase font-bold">
-						TV
+				
+					<span className="absolute top-3 left-3 z-10 px-2.5 py-0.5 bg-accent-red/70 text-bg-dark text-sm font-bebas tracking-wider rounded uppercase font-bold">
+						{item.mediaType}
 					</span>
-				)}
+				
 				<img
 					src={posterUrl}
 					alt={title}

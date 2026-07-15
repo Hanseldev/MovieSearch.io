@@ -39,7 +39,7 @@ export const SearchBar: FC<SearchBarProps> = ({
 	}));
 
 	return (
-		<div className="w-full max-w-3xl mx-auto space-y-6">
+		<div className="w-full max-w-3xl mx-auto space-y-3">
 			{/* Search Input Bar Group */}
 			<div className="relative flex items-center justify-between bg-surface-dark border border-dim-gold/10 rounded-xl pl-4 py-2 shadow-lg focus-within:border-dim-gold transition-all duration-300">
 				<input
