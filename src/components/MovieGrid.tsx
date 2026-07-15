@@ -22,7 +22,7 @@ export const MovieGrid: FC<MovieGridProps> = ({
 						key={idx}
 						className="flex flex-col bg-card-dark border border-dim-gold/5 rounded-xl overflow-hidden animate-pulse"
 					>
-						<div className="aspect-[2/3] w-full bg-surface-dark" />
+						<div className="aspect-2/3 w-full bg-surface-dark" />
 						<div className="p-3.5 space-y-2">
 							<div className="h-4 bg-surface-dark rounded-md w-3/4" />
 							<div className="flex justify-between">

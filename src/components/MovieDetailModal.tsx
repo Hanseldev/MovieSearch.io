@@ -81,7 +81,7 @@ export const MovieDetailModal: FC<MovieDetailModalProps> = ({
 				</button>
 
 				{/* Visual Poster Cover */}
-				<div className="w-full md:w-[40%] aspect-[2/3] md:aspect-auto md:h-auto bg-card-dark relative overflow-hidden">
+				<div className="w-full md:w-[40%] aspect-2/3 md:aspect-auto md:h-auto bg-card-dark relative overflow-hidden">
 					<img
 						src={posterUrl}
 						alt={title}

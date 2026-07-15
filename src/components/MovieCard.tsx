@@ -22,7 +22,7 @@ export const MovieCard: FC<MovieCardProps> = ({ item, onClick }) => {
 			className="group flex flex-col bg-card-dark border border-dim-gold/10 rounded-xl overflow-hidden cursor-pointer hover:border-accent-gold/45 transition-all duration-300 hover:scale-[1.01]"
 		>
 			{/* Poster Image Frame */}
-			<div className="relative aspect-[2/3] w-full overflow-hidden bg-surface-dark">
+			<div className="relative aspect-2/3 w-full overflow-hidden bg-surface-dark">
 				
 					<span className="absolute top-3 left-3 z-10 px-2.5 py-0.5 bg-accent-red/70 text-bg-dark text-sm font-bebas tracking-wider rounded uppercase font-bold">
 						{item.mediaType}
@@ -37,7 +37,7 @@ export const MovieCard: FC<MovieCardProps> = ({ item, onClick }) => {
 			</div>
 
 			{/* Metadata Panel */}
-			<div className="p-3.5 flex flex-col justify-between flex-grow gap-1">
+			<div className="p-3.5 flex flex-col justify-between grow gap-1">
 				<h3 className="text-text-light font-display text-base font-semibold line-clamp-1 group-hover:text-accent-gold transition-colors">
 					{title}
 				</h3>

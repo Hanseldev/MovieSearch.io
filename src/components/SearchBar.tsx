@@ -58,7 +58,7 @@ export const SearchBar: FC<SearchBarProps> = ({
 					onClick={onSearch}
 					disabled={loading}
 					
-					className="absolute right-0 px-6 py-1.5 min-w-[44px] h-[40px] rounded-xl cursor-pointer bg-card-dark hover:bg-card-dark/70"
+					className="absolute right-0 px-6 py-1.5 min-w-11 h-10 rounded-xl cursor-pointer bg-card-dark hover:bg-card-dark/70"
 					aria-label="Search "
 				>
 					{loading ? (
