@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+	/* --- PALETTE SYSTEM --- */
+
+	/* Use on the root <html> or <body> element (e.g., "bg-bg-dark") */
+	--color-bg-dark: #121212;
+
+	/* Use for main structural panels, modals, and navigation bars (e.g., "bg-surface-dark") */
+	--color-surface-dark: #1e1e1e;
+
+	/* Use for interactive cards, list items, or elevated elements (e.g., "bg-card-dark") */
+	--color-card-dark: #252525;
+
+	/* Use for critical warnings, errors, or primary red brand accents (e.g., "text-accent-red" or "bg-accent-red") */
+	--color-accent-red: #e57373;
+
+	/* Use for warning states, star ratings, or high-vibrancy call-to-actions (e.g., "text-accent-gold") */
+	--color-accent-gold: #ffb74d;
+
+	/* Use for primary body text and titles (e.g., "text-text-light") - provides 87% high contrast */
+	--color-text-light: #e6e1e5;
+
+	/* Use for medium-emphasis body text, subtitles, or active tab indicators (e.g., "text-muted-gold") */
+	--color-muted-gold: #cac4d0;
+
+	/* Use for low-emphasis text, disabled states, borders, and input placeholders (e.g., "text-dim-gold", "border-dim-gold") */
+	--color-dim-gold: #938f99;
+
+	/* --- TYPOGRAPHY SYSTEM --- */
+
+	/* Use for high-impact hero titles, section headers, or brand displays (e.g., "font-display") */
+	--font-display: "Plus Jakarta Sans", sans-serif;
+
+	/* Use for condensed, bold, or structural section headers (e.g., "font-bebas") */
+	--font-bebas: "Roboto Condensed", sans-serif;
+
+	/* Use for primary body copy, forms, inputs, and general user-interface elements (e.g., "font-sans") */
+	--font-sans: "Roboto", sans-serif;
+}
+
+body {
+	background-color: var(--color-bg-dark);
+	color: var(--color-text-light);
+}
